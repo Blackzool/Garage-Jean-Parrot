@@ -1,3 +1,54 @@
 /* Palette de couleurs #D92332 #D94350 #D9777F #262526 #F2F2F2 */
 /* Fonts : Radjdhani / Barlow */
 
+header {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+.logo-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 5px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    color:#262526;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.espace-pro {
+    margin-right: 40px;
+}
+
+.btn-espace-pro {
+    background-color: #D92332;
+    color: #F2F2F2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
