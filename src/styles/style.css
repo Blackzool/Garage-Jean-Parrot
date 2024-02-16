@@ -2,7 +2,8 @@
 /* Fonts : Radjdhani / Barlow */
 
 header {
-    max-width: 80%;
+    
+    background-color: #F2F2F2;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -52,3 +53,28 @@ header {
     text-decoration: none;
     display: inline-block;
 }
+
+body {
+    background-color: #262526;
+    max-width: 80%;
+    margin: auto;
+}
+
+section {
+    background-color: #D9777F;
+    margin-bottom: 20px;
+}
+
+.service {
+    font-size: 16px;
+    border: 5px solid #262526 !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
