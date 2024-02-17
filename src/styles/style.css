@@ -2,7 +2,6 @@
 /* Fonts : Radjdhani / Barlow */
 
 header {
-    
     background-color: #F2F2F2;
     margin: 0 auto;
     display: flex;
@@ -15,7 +14,7 @@ header {
 }
 
 .logo-container img {
-    max-width: 300px;
+    max-width: 100%; /* Utilise toute la largeur du conteneur */
     height: auto;
 }
 
@@ -56,25 +55,66 @@ header {
 
 body {
     background-color: #262526;
-    max-width: 80%;
+    max-width: 100%; /* Utilise toute la largeur disponible */
     margin: auto;
+    padding: 0 200px; /* Ajoute un padding sur les côtés pour un meilleur espacement */
 }
 
 section {
     background-color: #D9777F;
     margin-bottom: 20px;
+    padding: 20px; /* Ajoute un padding pour un meilleur espacement */
 }
 
 .service {
     font-size: 16px;
-    border: 5px solid #262526 !important;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
+.service h3 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.car-button {
+    color: #262526;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid #262526;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.car-button .img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.car-button:hover {
+    color: #262526;
+}
+
+.view-all-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #D92332;
+    color: #F2F2F2;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
