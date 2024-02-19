@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votre Site Web - Accueil</title>
+    <link href="front\styles\style.css" rel="stylesheet">
     <!-- Inclure le header -->
-    <?php include("header.php"); ?>
+    <?php include("header.php");
+
+    $db = new SQLite3('db.sqlite');
+    
+    // Récupérer les services de la base de données
+    $results = $db->query("SELECT * FROM services");
+    $services = [];
+    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+        array_push($services, $row);
+    }
+    
+    $db->close();
+    ?>
+     
 </head>
 <body>
 
