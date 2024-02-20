@@ -17,7 +17,7 @@
         array_push($services, $row);
     }
     
-    $db->close();
+    
     ?>
      
 </head>
@@ -27,30 +27,18 @@
 <section class="services">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="service">
-          <img src="src\img\service_1.webp" alt="Service1" class="img-fluid">
-          <h3>Entretien et vidange</h3>
-          <p>Le service d'entretien + vidange comprend la vérification et la maintenance régulières des composants essentiels de votre véhicule, ainsi que le remplacement de l'huile moteur usée par de l'huile fraîche. Cela garantit le bon fonctionnement du moteur, prolonge sa durée de vie et maintient les performances optimales de votre voiture.</p>
+      <?php foreach ($services as $service): ?>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="service">
+            <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="Service" class="img-fluid">
+            <h3><?php echo htmlspecialchars($service['nom']); ?></h3>
+            <p><?php echo htmlspecialchars($service['description']); ?></p>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="service">
-          <img src="src\img\service_2.jpg" alt="Service2" class="img-fluid">
-          <h3>Freinage-Disques et/ou plaquettes</h3>
-          <p>Le service de freinage - remplacement des disques et/ou des plaquettes - implique l'inspection et le remplacement des composants de freinage usés ou endommagés, tels que les disques de frein et les plaquettes. Cela garantit un freinage efficace et sécurisé, améliorant ainsi la sécurité et les performances de votre véhicule.</p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="service">
-          <img src="src\img\service_3.jpg" alt="Service3" class="img-fluid">
-          <h3>Changement de pneu</h3>
-          <p>Le service de changement de pneu consiste à retirer les pneus usés de votre véhicule et à les remplacer par des pneus neufs ou adaptés aux conditions routières actuelles. Cela assure une adhérence optimale, une conduite sûre et une meilleure stabilité sur la route, contribuant ainsi à la sécurité et au confort de votre trajet.</p>
-        </div>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
-</section>
+  </section>
 
 
 <section class="occasions">
@@ -83,6 +71,8 @@
  </div>
 </section>
 
-
+<?php include('footer.php');
+$db->close(); ?>
 </body>
+
 </html>
